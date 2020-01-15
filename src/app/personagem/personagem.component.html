@@ -1,12 +1,13 @@
 <br>
-<h2>{{personagem.nome}}</h2>
-<div><span>Id:</span>{{personagem.id}}</div>
-<div><span>Vida:</span>{{personagem.vida}}</div>
-<div><span>Estilo de Jogo:</span>{{personagem.estilo}}</div>
-<div><span>Genêro:</span>{{personagem.genero}}</div>
-
-<div>
-    <label>Nome:
-    <input [(ngModel)]= personagem.nome placeholder="nome"/>
-  </label>
-</div>
+<h2>Meus Personagens</h2>
+<ul class="heroes">
+    <li *ngFor="let personagem of personagens">
+        <a routerLink="/detalhes/{{personagem.id}}">
+            <span class="badge">{{personagem.id}}</span>
+            <span>{{personagem.nome}}</span>
+            <span>{{personagem.vida}}</span>
+            <span>{{personagem.estilo}}</span>
+            <span>{{personagem.genero}}</span>
+        </a>
+    </li>
+</ul>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Personagem } from '../personagem';
+import {PersonagemService} from '../personagem.service';
+
 
 @Component({
   selector: 'app-personagem',
@@ -7,18 +9,16 @@ import { Personagem } from '../personagem';
   styleUrls: ['./personagem.component.css']
 })
 export class PersonagemComponent implements OnInit {
-  personagem: Personagem = {
- id: 1,
- nome: 'Cebolinha',
- vida : 250,
- estilo: 'Ladrão',
- genero: 'masculino'
+    personagens: Personagem[] ;
 
-  };
-  constructor() {
-       }
+  constructor( private personagemService: PersonagemService) {   }
 
   ngOnInit() {
-  }
+      this.getPersonagem();
 
+  }
+getPersonagem(): void {
+
+ this.personagemService.getPersonagens().subscribe( personagens => this.personagens = personagens);
+}
 }
