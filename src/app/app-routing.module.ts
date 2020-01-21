@@ -5,10 +5,12 @@ import { DashboardComponent} from './dashboard/dashboard.component';
 import {PersonagemDetalheComponent} from './personagem-detalhe/personagem-detalhe.component';
 
 const routes: Routes = [
-  {path: 'personagem', component: PersonagemComponent},
-  {path: 'dashboard', component: DashboardComponent},
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  {path: 'dashboard', component: DashboardComponent},
   {path: 'detalhes/:id', component: PersonagemDetalheComponent},
+  {path: 'personagem', component: PersonagemComponent},
+
+
 
 ];
 

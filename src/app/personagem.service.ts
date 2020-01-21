@@ -10,16 +10,20 @@ import {MensagemService} from './mensagem.service';
 export class PersonagemService {
 
   constructor( private mensagemService: MensagemService) { }
+
+  getPersonagens(): Observable<Personagem[]> {
+    this.mensagemService.add('');
+    return of(PERSONAGENS);
+    }
+
+
   getPersonagem(id: number): Observable<Personagem> {
-    this.mensagemService.add('Personagem : id=${id}');
+    this.mensagemService.add('Personagem: id: ' + id);
 
     return of(PERSONAGENS.find( personagem => personagem.id === id));
   }
 
-getPersonagens(): Observable<Personagem[]> {
-this.mensagemService.add('Personagens');
-return of(PERSONAGENS);
-}
+
 
 
 }

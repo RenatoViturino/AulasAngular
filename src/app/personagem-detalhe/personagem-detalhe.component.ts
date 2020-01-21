@@ -10,7 +10,7 @@ import {PersonagemService} from '../personagem.service';
   styleUrls: ['./personagem-detalhe.component.css']
 })
 export class PersonagemDetalheComponent implements OnInit {
- @Input() personagem: Personagem;
+ personagem: Personagem;
 
 
   constructor(
@@ -19,7 +19,7 @@ export class PersonagemDetalheComponent implements OnInit {
     private location: Location) { }
 
   ngOnInit(): void {
-this.getPersonagem();
+  this.getPersonagem();
   }
 getPersonagem(): void {
  const id = + this.route.snapshot.paramMap.get('id');

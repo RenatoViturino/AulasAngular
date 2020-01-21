@@ -12,7 +12,4 @@ add(mensagem: string) {
 clear() {
   this.mensagens = [];
 }
-
-
-  constructor() { }
 }

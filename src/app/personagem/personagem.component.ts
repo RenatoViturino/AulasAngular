@@ -14,10 +14,10 @@ export class PersonagemComponent implements OnInit {
   constructor( private personagemService: PersonagemService) {   }
 
   ngOnInit() {
-      this.getPersonagem();
+      this.getPersonagens();
 
   }
-getPersonagem(): void {
+getPersonagens(): void {
 
  this.personagemService.getPersonagens().subscribe( personagens => this.personagens = personagens);
 }

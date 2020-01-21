@@ -1,0 +1,17 @@
+<div formArrayName="aliases">
+    <h3>
+        Teste
+    </h3>
+
+
+    <div *ngFor=" let endereco of aliases.controls; let i = index">
+        <label>
+      Teste Alias :
+      <input type="text" [formControlName]= "i">
+    </label>
+    </div>
+</div>
+<button (click)="addAlias()">Adicionar</button>
+<p>
+    Status : {{perfilForm.status}}
+</p>

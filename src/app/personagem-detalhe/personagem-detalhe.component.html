@@ -1,5 +1,10 @@
 <div *ngIf="personagem">
-    <h2>{{personagem.nome |uppercase}}Detalhes</h2>
+    <h2>{{personagem.nome |uppercase}} Detalhes</h2>
+    <div><span>ID: </span>{{personagem.id}}</div>
+    <div><span>VIDA: </span>{{personagem.vida}}</div>
+    <div><span>ESTILO: </span>{{personagem.estilo}}</div>
+    <div><span>GÊNERO: </span>{{personagem.genero}}</div>
+
     <div>
         <label>
         Nome:

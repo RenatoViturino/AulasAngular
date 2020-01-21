@@ -9,6 +9,10 @@ import {FormsModule} from '@angular/forms';
 import { PersonagemDetalheComponent } from './personagem-detalhe/personagem-detalhe.component';
 import { MensagemComponent } from './mensagem/mensagem.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
+import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     PersonagemComponent,
     PersonagemDetalheComponent,
     MensagemComponent,
-    DashboardComponent
+    DashboardComponent,
+    NameEditorComponent,
+    ProfileEditorComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
